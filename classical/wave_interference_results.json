@@ -1,0 +1,21 @@
+{
+  "model": "2D wave equation, finite differences, two coherent sources; intensity = psi^2 averaged over the direct-wave window only",
+  "params": {
+    "lambda": 0.06,
+    "d": 0.15,
+    "L_screen": 0.8,
+    "v": 1.0
+  },
+  "gates": {
+    "single_source_no_fringes": true,
+    "visibility": true,
+    "spacing": true,
+    "nodes": true
+  },
+  "visibility": 0.9843945524480763,
+  "fringe_spacing_measured": 0.37,
+  "fringe_spacing_paraxial": 0.32,
+  "fringe_spacing_exact_geometry": 0.34914862437758787,
+  "note_spacing": "Simulation tracks exact geometry; the paraxial lambda*L/d approximation runs ~9% narrow at sin(theta)=0.4, as theory says it should.",
+  "postmortem": "v1/v2 transposed source indexing ([sx, sy] into a [y, x] array) and let boundary reflections ring; v3 fixes indexing, widens the domain, and time-gates the average."
+}

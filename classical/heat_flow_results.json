@@ -1,0 +1,27 @@
+{
+  "model": "1D heat equation (Fourier), FTCS, rod 0.1 m, ends 100 C / 0 C",
+  "gates": {
+    "steady_state": true,
+    "series_match": true,
+    "energy_balance": true,
+    "material_order": true
+  },
+  "materials": {
+    "copper": {
+      "k": 401.0,
+      "alpha_m2_s": 0.00011624536178107607,
+      "t_center_45C_s": 22.173787930174562
+    },
+    "aluminium": {
+      "k": 237.0,
+      "alpha_m2_s": 9.753086419753086e-05,
+      "t_center_45C_s": 26.428556962025315
+    },
+    "iron": {
+      "k": 80.0,
+      "alpha_m2_s": 2.2589298319920938e-05,
+      "t_center_45C_s": 114.10713
+    }
+  },
+  "steady_flux_W_m2": 401000.0000000006
+}
