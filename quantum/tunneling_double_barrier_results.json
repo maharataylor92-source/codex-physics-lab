@@ -1,0 +1,26 @@
+{
+  "barrier": {
+    "V": 1.5,
+    "width": 1.5,
+    "gap": 2.0
+  },
+  "resonances": [
+    {
+      "E": 0.471,
+      "T": 0.9954539537206071
+    }
+  ],
+  "chosen": {
+    "E_res": 0.471,
+    "T_exact_res": 0.9954539537206071,
+    "E_off": 0.821,
+    "T_exact_off": 0.004628057146558849,
+    "T_packet_on": 0.048887047634015995,
+    "T_packet_off": 0.005831133909742642
+  },
+  "gates": {
+    "G1_resonance_unity": true,
+    "G2_off_resonance_tiny": true,
+    "G3_packet_contrast": true
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "r1": 1.0,
+  "r2": 4.0,
+  "dv1": 0.26491106406735176,
+  "dv2": 0.18377223398316211,
+  "dv_total": 0.4486832980505139,
+  "t_transfer": 12.418235332245125,
+  "t_apoapsis_measured": 12.418000000000001,
+  "arrival_radius": 3.9999999416093113,
+  "post_burn_radius_deviation": 0.00020928081912274799,
+  "earth_mars_days": 258.91026027875733,
+  "gates": {
+    "G1_circularized_1pct": true,
+    "G2_timing_1pct": true
+  }
+}

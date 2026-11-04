@@ -41,7 +41,7 @@ a simulation result, never a measurement.
    never presented as experimentally validated. They have no entry
    here, because they have no honest experiment.
 
-## Experiments (v1.0.0, November 4, 2026)
+## Experiments (v1.0.0 + the November 4, 2026 deepening batch)
 
 ### quantum/
 
@@ -50,6 +50,9 @@ a simulation result, never a measurement.
 | `tunneling.py` | Quantum mechanics | SIM | Wavepacket vs a classically forbidden barrier (E=0.5, V=1.5): transmission 19.9% / 1.5% / 0.13% at widths 1 / 2 / 3, tracking the exact analytic formula (19.2% / 1.2% / 0.07%). All gates pass. |
 | `radical_pair.py` + `RADICAL_PAIR_SPEC.md` | Quantum biology / spin chemistry | SIM | Radical-pair chemical compass toy model (2 electrons + 1 nucleus, exact dynamics, Qiskit cross-checked): singlet yield Φ_S swings 0.5075 → 0.6719 with field angle at 50 µT; anisotropy 0.174 (≈32% of mean). Toy model — one nucleus, k_S = k_T. |
 | `radical_pair_fieldsweep.py` | Quantum biology / spin chemistry | SIM | The same model across Earth's real field range (25–65 µT) × angle: anisotropy peaks at ≈45 µT (0.177, 33% of mean) and fades at both ends (25 µT: 24%). Sanity gate reproduces the 50 µT run exactly. |
+| `tunneling_double_barrier.py` | Quantum mechanics | SIM | Resonant tunneling: exact T = 0.9955 at the E = 0.471 resonance of a symmetric double barrier; wavepacket contrast 8.4× on/off resonance (absolute packet T is small — a narrow resonance accepts only a thin spectral slice, stated in the file). |
+| `alpha_decay.py` | Nuclear physics | NUM vs DATA | Gamow's 1928 theory with NO fitted parameters (r₀ = 1.2 fm) against 10 measured half-lives: correlation 0.9987, predicted span 24.8 vs measured 24.2 decades, RMS residual 0.61 decades, Geiger–Nuttall slope 161 vs 157. Tunneling, checked against nature. |
+| `radical_pair_deepened.py` | Quantum biology / spin chemistry | SIM | Robustness of the compass: anisotropy washes out with nuclei count (0.174 → 0.105 → 0.055 for n = 1→2→3); reaction-rate asymmetry k_T/k_S = 0.1 erases and slightly inverts it (−0.011), while 3.0 amplifies it (0.255). |
 
 ### classical/
 
@@ -58,6 +61,18 @@ a simulation result, never a measurement.
 | `orbit_simulator.py` | Celestial mechanics | SIM | Newtonian RK4 orbits from v = √(GM/r): circular-orbit radius drift 2×10⁻¹³ over 5 periods; Kepler T ∝ r^3/2 exact; ellipse period matches Kepler; escape at 1.05 v_esc. Real scale: Earth 29.78 km/s, 365.26 d; ISS 7.67 km/s, 92.4 min. |
 | `heat_flow.py` | Thermodynamics | SIM | Fourier heat flow in a rod (q = −k∇T): steady state exactly linear; transient center temperature matches the analytic Fourier series to 0.01 °C; ΔQ = mcΔT energy balance vs integrated flux within 1.9%. Center reaches 45 °C: copper 22 s, aluminium 26 s, iron 114 s. |
 | `wave_interference.py` | Wave physics / optics | SIM | 2D wave-equation double-source interference: visibility 0.98, node lines at 0.8% of peak (P₁ + P₂ = 0), fringe spacing 0.370 m vs exact geometry 0.349 m (the paraxial λL/d = 0.320 m runs ~9% narrow at sin θ = 0.4, as theory says). The file's header keeps the v1–v2 post-mortem: a transposed-indexing bug and cavity ringing that the gates caught. |
+| `orbit_transfer.py` | Celestial mechanics | SIM | Hohmann transfer r = 1 → 4 flown by the RK4 integrator: arrival radius exact, circularized to 0.021% over a full period, transfer on the analytic schedule. Real scale: Earth → Mars in 259 days, departure Δv 2.95 km/s. |
+| `heat_flow_extended.py` | Thermodynamics | SIM | 2D plate (matches the 1D linear profile to 2.7×10⁻⁸ °C) plus a layered insulation stack: R = 1.583 m²K/W, the copper layer drops 0.01 °C (a spreader, not an insulator), and a plain fiberglass wall of equal thickness beats the stack — reported as found. |
+| `wave_whichpath.py` | Wave physics / optics | SIM | The which-path analog: attenuate source B by β and the visibility follows V = 2β/(1+β²) within 0.01 at every β; fully blocked, V = 0.045; V² + D² = 1 within 0.011. Two measurement post-mortems (estimator artifacts, edge reflections) are documented in the file. |
+
+### foundations/
+
+| Experiment | Field | Method | Headline result |
+|---|---|---|---|
+| `uncertainty_wavepacket.py` | Quantum foundations | SIM | Free Gaussian packet: Δx·Δp starts at exactly ħ/2 (0.5000) and only rises; Δx(t) tracks the analytic spreading curve to 0.00%; Δp constant. The uncertainty floor, watched live. |
+| `duality_machzehnder.py` | Quantum foundations | QSIM | Mach–Zehnder with a marker qubit: visibility falls 1 → 0 as path marking strengthens; V² + D² = 1.0000 at all seven marking angles (Englert–Greenberger), exact statevector on Aer. |
+| `zero_point.py` | Quantum mechanics | NUM | Zero-point scale table: H₂ E₀ = 0.2728 eV (known 0.27); every molecular vibration's spacing exceeds 5 kT at 300 K (frozen in the ground state); a 1 Hz pendulum's E₀ is ~10⁻¹⁴ kT by contrast. |
+| `amdahl.py` | Computing | NUM | Amdahl's law ceilings verified: S∞ = 1/(1−p); reaching 90% of the ceiling takes s = 171 processors at p = 0.95 and s = 891 at p = 0.99. The serial fraction is the wall. |
 
 ## The index
 

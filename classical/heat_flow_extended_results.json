@@ -1,0 +1,29 @@
+{
+  "partA": {
+    "center_row_max_err_C": 2.6562133825791534e-08,
+    "laplace_resid": 1.637658897379879e-10,
+    "gates": {
+      "A1_matches_1D": true,
+      "A2_residual": true
+    }
+  },
+  "partB": {
+    "stack_R": 1.583458021612635,
+    "stack_flux_exact": 63.15292141319755,
+    "interface_temps": [
+      100.0,
+      99.9921255708961,
+      21.050973804399177,
+      -7.105427357601002e-15
+    ],
+    "single_material_flux_15cm": {
+      "copper": 267333.3333333333,
+      "aluminium": 158000.0,
+      "iron": 53333.333333333336,
+      "wood": 100.0,
+      "fiberglass": 26.666666666666668
+    },
+    "cold_face_6h_C": 2.56355819281704,
+    "note": "Steady flux is the exact series-resistance value; transient FD tracks the cold face. Pure fiberglass (0.04 W/mK) alone beats the stack per thickness -- copper's role is spreading/structure, not insulation."
+  }
+}
