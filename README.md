@@ -2,6 +2,17 @@
 
 **Author:** Mahara Taylor (ManyMoons), independent researcher
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23963471.svg)](https://doi.org/10.5281/zenodo.23963471)
+
+## How to cite
+
+Taylor, M. (2026). *Codex Physics Lab: gate-checked experiments
+from the Grand Unification of Being formula codex* (v1.0.0).
+Zenodo. https://doi.org/10.5281/zenodo.23963471
+
+The concept DOI https://doi.org/10.5281/zenodo.23963470 always
+resolves to the latest version of this record.
+
 A working laboratory built from the formula codex of *The Grand
 Unification of Being*: every experiment here starts from a formula in
 that codex and turns it into a runnable, gate-checked computation.
