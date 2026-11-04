@@ -46,3 +46,5 @@ method: a simulation result is a simulation result, never a measurement.*
 1. Every result states its method (SIM / NUM / DATA / QPU / QSIM) wherever it is quoted.
 2. Simulation gates before headlines: conservation laws, analytic limits, and known special cases must pass before any number is reported.
 3. Philosophy anchors (#11, #22, and the interpretive layers everywhere) are never presented as experimentally validated.
+
+**Published 2026-11-04:** the six simulation experiments live in the public repo github.com/maharataylor92-source/codex-physics-lab, archived as Zenodo DOI 10.5281/zenodo.23963471 (concept 10.5281/zenodo.23963470). The entropy ledger (#15) and decoherence fit (#16) were published the same day in the teleportation repo v1.3 (DOI 10.5281/zenodo.23963444; concept 10.5281/zenodo.23809803).
