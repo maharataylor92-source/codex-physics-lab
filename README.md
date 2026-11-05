@@ -68,6 +68,8 @@ a simulation result, never a measurement.
 | `navier_stokes.py` | Fluid dynamics | SIM | Lattice-Boltzmann (D2Q9) channel flow past a cylinder: the wake is dead steady at Re = 20 (probe RMS 7×10⁻⁷) and the von Kármán vortex street emerges on its own at Re = 80 (spectral prominence ~21,000). St = 0.288 on inlet speed — high vs the free-stream ~0.16 because the 33% channel blockage speeds the flow past the cylinder; stated plainly in the file. |
 | `double_pendulum.py` | Classical mechanics / chaos | SIM | Chaos measured, not asserted: two double pendulums released 10⁻⁹ rad apart decorrelate in ~16 s; the Benettin Lyapunov exponent is L = 1.51 /s, while a small-oscillation control pair gives L ≈ 0.03 /s — the integrator does not manufacture the chaos it reports. |
 | `membrane_modes.py` | Wave physics | SIM | Chladni patterns from first principles: the discrete Laplacian's lowest eigenvalues match the analytic ladder π²(m²+n²) to 0.19%, the (1,2)/(2,1) degeneracy holds, and a (2,1) mode excited in the time-domain solver rings at the predicted frequency. (A probe placed on a node failed the dynamics gate first — post-mortem in the file.) |
+| `mercury_perihelion.py` | General relativity | SIM | The 43-arcsecond anomaly, reproduced: integrating the GR orbit equation over 200 Mercury orbits gives 43.05 arcsec/century of perihelion advance vs the observed 42.98, while the Newtonian control run drifts just 0.065. (The first pass read 57.7 with a +5.6 control drift — RK4 phase error on a coarse grid; the fix is documented in the file.) |
+| `feigenbaum.py` | Chaos theory | NUM | Feigenbaum's δ from the logistic map's superstable points (located by exact finite iteration — period classification failed twice at the 10⁻⁴ level, post-mortem in the file): ratios 4.709, 4.681, 4.663, 4.668 → δ = 4.669202. |
 
 ### foundations/
 
@@ -80,6 +82,8 @@ a simulation result, never a measurement.
 | `gr_scales.py` | General relativity | NUM | Schwarzschild radii from 1 kg to M87*, and gravitational time dilation where it is measured daily: the computed GPS gain is +45.7 µs/day, exactly the canonical figure (net +38.5 with the SR term); a neutron-star surface clock ticks at 0.766×. |
 | `emc2.py` | Special relativity | NUM | Rest-energy scales: 1 kg = 21.5 Mt TNT equivalent; the Sun converts 4.26×10⁹ kg/s; U-235 fission releases 0.091% of the mass. Relativistic vs Newtonian KE: Newton is low by 0.76% at 0.1c and 1,143% at 0.99c. (A wrong gate anchor was caught and corrected mid-build — kept in the file.) |
 | `ising_model.py` | Statistical physics | SIM | Spontaneous magnetization by Metropolis Monte Carlo: the susceptibility peak lands at T = 2.313 vs Onsager's exact Tc = 2.269 (1.9% — the expected finite-size shift for a 48×48 lattice); ordered at T = 1.6 (⟨|m|⟩ = 0.94), disordered at 3.2 (0.05). The first run's peak sat 4.1% high from critical slowing down; the 6× longer near-Tc sampling is documented in the file. |
+| `percolation.py` | Statistical physics | SIM | The spanning transition: site percolation on a 128×128 lattice switches from islands to a continent at p_c = 0.5909, vs the known 0.5927. |
+| `planck_spectrum.py` | Thermal radiation | NUM | Two laws inside one curve: numerically integrating Planck's spectrum recovers σ to 0.000% and Wien's constant to 0.001% at four temperatures, and M(3000)/M(1000) = 81.00 exactly as T⁴ demands. |
 
 ## The index
 

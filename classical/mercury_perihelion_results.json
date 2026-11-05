@@ -1,0 +1,9 @@
+{
+  "gr_arcsec_per_century": 43.04569473887137,
+  "newton_arcsec_per_century": 0.06492451328889315,
+  "target": 42.98,
+  "gates": {
+    "G1_gr_matches": true,
+    "G2_control": true
+  }
+}
