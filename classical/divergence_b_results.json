@@ -1,0 +1,14 @@
+{
+  "div_local_max_d81": 0.17873604495917228,
+  "div_local_max_d161": 0.04657693647659523,
+  "div_local_p999_d161": 0.031584716906182426,
+  "div_local_median_d161": 0.0018342459797615533,
+  "convergence_factor": 3.837436690345373,
+  "div_eps": 0.031584716906182426,
+  "fieldline_max_dev": 0.00020473524122038156,
+  "gates": {
+    "A_div_zero": true,
+    "B_flux_zero": true,
+    "C_line_curve": true
+  }
+}

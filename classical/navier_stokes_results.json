@@ -1,0 +1,25 @@
+{
+  "cases": {
+    "20": {
+      "tau": 0.68,
+      "rho_drift": 0.0033604274964980085,
+      "probe_rms": 7.482296099822954e-07,
+      "f_peak_per_step": 0.0003333333333333333,
+      "strouhal": 0.16,
+      "peak_prominence": 577.096839723275
+    },
+    "80": {
+      "tau": 0.545,
+      "rho_drift": 0.0010528476393549813,
+      "probe_rms": 0.0013050903487174267,
+      "f_peak_per_step": 0.0006000000000000001,
+      "strouhal": 0.28800000000000003,
+      "peak_prominence": 21089.74836458823
+    }
+  },
+  "gates": {
+    "G1_mass": true,
+    "G2_steady_low_Re": true,
+    "G3_shedding_St": true
+  }
+}

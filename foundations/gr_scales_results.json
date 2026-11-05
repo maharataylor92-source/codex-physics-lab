@@ -1,0 +1,41 @@
+{
+  "rows": [
+    {
+      "object": "1 kg mass",
+      "mass_kg": 1.0,
+      "rs_m": 1.4852320538237331e-27
+    },
+    {
+      "object": "human (70 kg)",
+      "mass_kg": 70.0,
+      "rs_m": 1.039662437676613e-25
+    },
+    {
+      "object": "Earth",
+      "mass_kg": 5.9722e+24,
+      "rs_m": 0.0088701028718461
+    },
+    {
+      "object": "Sun",
+      "mass_kg": 1.98847e+30,
+      "rs_m": 2953.3393820668784
+    },
+    {
+      "object": "Sagittarius A* (4.3e6 Msun)",
+      "mass_kg": 8.550421e+36,
+      "rs_m": 12699359342.887577
+    },
+    {
+      "object": "M87* (6.5e9 Msun)",
+      "mass_kg": 1.2925054999999999e+40,
+      "rs_m": 19196705983434.707
+    }
+  ],
+  "gps_gain_us_day": 45.718449825926655,
+  "ns_surface_rate": 0.7658540895697019,
+  "gates": {
+    "G1_known_radii": true,
+    "G2_gps": true,
+    "G3_neutron_star": true
+  }
+}
