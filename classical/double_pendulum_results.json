@@ -1,0 +1,11 @@
+{
+  "lyapunov_chaotic_per_s": 1.5121836463910974,
+  "lyapunov_control_per_s": 0.02901040779434151,
+  "decorrelation_time_s": 15.675,
+  "predictability_horizon_s": 13.704199146977638,
+  "gates": {
+    "G1_decorrelates": true,
+    "G2_lambda": true,
+    "G3_control": true
+  }
+}

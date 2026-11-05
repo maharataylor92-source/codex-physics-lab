@@ -66,6 +66,8 @@ a simulation result, never a measurement.
 | `wave_whichpath.py` | Wave physics / optics | SIM | The which-path analog: attenuate source B by β and the visibility follows V = 2β/(1+β²) within 0.01 at every β; fully blocked, V = 0.045; V² + D² = 1 within 0.011. Two measurement post-mortems (estimator artifacts, edge reflections) are documented in the file. |
 | `divergence_b.py` | Electromagnetism | SIM | Maxwell's no-monopole law, checked three ways on a point dipole: net flux through any closed box is zero to machine precision (~10⁻¹⁶ of gross); a traced field line rides the exact curve r = L sin²θ to 0.02%; numerical ∇·B is 0.18% of the field's own scale (median) and shrinks with textbook Δ² convergence — the first global-max gate failed on core-boundary truncation and the fix is documented in the file. |
 | `navier_stokes.py` | Fluid dynamics | SIM | Lattice-Boltzmann (D2Q9) channel flow past a cylinder: the wake is dead steady at Re = 20 (probe RMS 7×10⁻⁷) and the von Kármán vortex street emerges on its own at Re = 80 (spectral prominence ~21,000). St = 0.288 on inlet speed — high vs the free-stream ~0.16 because the 33% channel blockage speeds the flow past the cylinder; stated plainly in the file. |
+| `double_pendulum.py` | Classical mechanics / chaos | SIM | Chaos measured, not asserted: two double pendulums released 10⁻⁹ rad apart decorrelate in ~16 s; the Benettin Lyapunov exponent is L = 1.51 /s, while a small-oscillation control pair gives L ≈ 0.03 /s — the integrator does not manufacture the chaos it reports. |
+| `membrane_modes.py` | Wave physics | SIM | Chladni patterns from first principles: the discrete Laplacian's lowest eigenvalues match the analytic ladder π²(m²+n²) to 0.19%, the (1,2)/(2,1) degeneracy holds, and a (2,1) mode excited in the time-domain solver rings at the predicted frequency. (A probe placed on a node failed the dynamics gate first — post-mortem in the file.) |
 
 ### foundations/
 
@@ -77,6 +79,7 @@ a simulation result, never a measurement.
 | `amdahl.py` | Computing | NUM | Amdahl's law ceilings verified: S∞ = 1/(1−p); reaching 90% of the ceiling takes s = 171 processors at p = 0.95 and s = 891 at p = 0.99. The serial fraction is the wall. |
 | `gr_scales.py` | General relativity | NUM | Schwarzschild radii from 1 kg to M87*, and gravitational time dilation where it is measured daily: the computed GPS gain is +45.7 µs/day, exactly the canonical figure (net +38.5 with the SR term); a neutron-star surface clock ticks at 0.766×. |
 | `emc2.py` | Special relativity | NUM | Rest-energy scales: 1 kg = 21.5 Mt TNT equivalent; the Sun converts 4.26×10⁹ kg/s; U-235 fission releases 0.091% of the mass. Relativistic vs Newtonian KE: Newton is low by 0.76% at 0.1c and 1,143% at 0.99c. (A wrong gate anchor was caught and corrected mid-build — kept in the file.) |
+| `ising_model.py` | Statistical physics | SIM | Spontaneous magnetization by Metropolis Monte Carlo: the susceptibility peak lands at T = 2.313 vs Onsager's exact Tc = 2.269 (1.9% — the expected finite-size shift for a 48×48 lattice); ordered at T = 1.6 (⟨|m|⟩ = 0.94), disordered at 3.2 (0.05). The first run's peak sat 4.1% high from critical slowing down; the 6× longer near-Tc sampling is documented in the file. |
 
 ## The index
 
